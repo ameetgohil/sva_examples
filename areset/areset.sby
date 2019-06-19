@@ -1,0 +1,18 @@
+[tasks]
+prove
+cover
+
+[options]
+prove: mode prove
+cover: mode cover
+multiclock on
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal areset.sv
+prep -top areset
+
+[files]
+areset.sv
