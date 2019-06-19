@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 10
+expect fail
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal mem.sv
+prep -top testbench
+
+[files]
+mem.sv
+
